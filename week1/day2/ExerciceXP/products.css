@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+	border: red dashed 1px;
+}
+
+.block {
+	display: inline-block;
+    height: 460px;
+    width: 270px;
+    margin: 20px 35px;
+}
+
+#gb {
+	background-image: url(girlblack.png);
+}
+
+#mb {
+	background-image: url(menblue.png);
+}
+
+#mw {
+	background-image: url(menwhite.png);
+}
+
+#ww {
+	background-image: url(girlwhite.png);
+}
+
+.bgimage {
+	height: 330px;
+	background-size: cover;
+}
+

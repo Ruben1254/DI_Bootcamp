@@ -1,17 +1,19 @@
 * {
 	box-sizing: border-box;
-	border: solid red 1px;
 }
-
-nav {
+/*nav bar*/
+nav, footer {
 	background-color: black;
 	color: white;
 	position: fixed;
-	top: 0;
 	left: 0;
 	right: 0;
-	height: 12vh;
 	width: 100vw;
+}
+
+nav {
+	top: 0;
+	height: 12vh;
 }
 
 ul {
@@ -28,4 +30,20 @@ li {
 #product {
 	position: absolute;
     right: 4%;
+    top: 20%;
+    font-size: 1.5em;
+    font-family: "roboto";
+}
+
+
+/*footer*/
+footer{
+	bottom: 0;
+	height: 6vh;
+}
+
+footer > p {
+	font-family: "roboto";
+	position: absolute;
+	right: 4%;
 }
