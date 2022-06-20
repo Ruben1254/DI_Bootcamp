@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#underline {
+	text-decoration: underline;
+}
+
+.list {
+	position: relative;
+	left: 4%;
+}
+
+#center {
+	text-align: center;
+}
+
+img {
+	border: orangered solid 10px;
+	height: 25%;
+	width: 35%;
+	display: block;
+	margin: 5% auto;
+}
+
+h4 {
+	text-align: center;
+	color: red;
+	border: solid red 1px;
+}
+
+th, td {
+	border: solid 1px;
+}
+
+td {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}

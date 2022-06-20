@@ -1,0 +1,19 @@
+.vw {
+	border: solid yellowgreen 2vw;
+	font-size: 3vw;
+	margin: 1.6em;
+}
+
+.em_unit {
+	font-size: 2em;
+}
+
+.px {
+	border: solid orangered 20px;
+	font-size: 20px;
+}
+
+.em_unit_small {
+	font-size: 0.8em;
+	padding: 2rem;
+}
