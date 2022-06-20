@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("thor.jpg") ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "josefin sans";
+}
+
+/*navigation bar*/
+
+ul {
+	height: 55px;
+	width: 100%;
+	margin: 0;
+	background-color: black;
+}
+
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+li {
+	display: inline-block;
+	list-style: none;
+	margin: auto 2%;
+	position: relative;
+    top: 19%;
+    left: 55%;
+    font-size: 20px;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+
+/*name*/
+
+h1 {
+position: absolute;
+top: 30%;
+left: 9%;
+font-size: 5em;
+}
+
+p {
+	width: 45%;
+	position: absolute;
+	top: 49%;
+	left: 10%;
+	font-size: 109%;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	
+	text-align: center;
+	height: 7%;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+	font-size: 150%;
+	margin: 5px;
+}
+
+/*small device*/
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+	ul {
+		background-color: yellow;
+	}
+
+	li a {
+		color: black;
+	}
+
+	h1 {
+		font-size: 35px;
+	}
+}
+
+/*medium device*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+	ul {
+		background-color: lightgreen;
+	}
+
+	li a {
+		color: black;
+	}
+
+	h1 {
+		font-size: 25px;
+	}
+}
+
+/*large device*/
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	ul {
+		background-color: red;
+	}
+
+	li a {
+		color: white;
+	}
+}
+
+/*extra large device*/
+
+@media screen and (min-width: 1200px) {
+	h1 {
+	display: block;
+    width: 650px;
+    top: 44%;
+    left: 3%;
+	}
+
+	p {
+	left: 36%;
+	}
+}
