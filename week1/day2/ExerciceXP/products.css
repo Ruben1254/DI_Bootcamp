@@ -1,6 +1,6 @@
 * {
 	box-sizing: border-box;
-	border: red dashed 1px;
+	font-family: sans-serif;
 }
 
 .block {
@@ -31,3 +31,62 @@
 	background-size: cover;
 }
 
+.left, .right {
+	display: inline-block;
+	border: hidden;
+	height: 50px;
+    width: 50px;
+    border-radius: 50%;
+	color: white;
+	font-family: "Maven Pro";
+	text-align: center;
+}
+
+.left {
+	background-color: seagreen;
+	position: relative;
+	top: 3%;
+    left: 3%;
+}
+
+.right {
+	background-color: red;
+	position: relative;
+    top: 3%;
+    left: 57%;
+}
+
+.right.alone {
+    left: 77%;
+}
+
+
+/*description*/
+
+.description {
+	height: 28%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+p + p {
+	color: green;
+}
+
+span {
+	text-decoration: line-through;
+	font-size: 0.7em;
+	color: grey;
+}
+
+input {
+	border: grey solid 1px;
+	background-color: white;
+	color: grey;
+	font-family: bold, sans-serif;
+    height: 26%;
+    width: 62%;
+    position: relative;
+    bottom: 10%;
+    border-radius: 9%;
+}
