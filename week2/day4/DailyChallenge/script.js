@@ -9,22 +9,20 @@ function starFrame() {
  }
  let n = longerWord + 4;
  let str = "";
- for (let i = 0; i < n; i++){
- 	for (let j = 0; j < wordsArray.length + 2; j++) {
+ for (let j = 0; j < wordsArray.length + 2; j++){
+ 	for (let i = 0; i < n; i++){
  		if ( i == 0 || i == n - 1){
  			str += "*";
  		}else if (j == 0 || j == wordsArray.length + 1){
  			str += "*";
- 		}else if ((i == 1 || i == -2) && ( 0 < j < wordsArray.length + 1)){
+ 		}else if ((i == 1 || i == -2 || i > ((wordsArray[j-1].length)+1)) && ( 0 < j < wordsArray.length + 1)){
  			str += " ";
- 		}else if ( i > 1 && j > 0){
- 			str += wordsArray[j-1];
- 		}else{
- 			str +=" ";
- 		}
- 		}
-  console.log(str)
+ 		}else if ( j > 0 && 1 < i < ((wordsArray[j-1].length)+2)){
+ 				str += wordsArray[j-1][i-2];
+ 		}}
+    str += "\n";
  	}
+ console.log(str);
 }
 
 starFrame();
