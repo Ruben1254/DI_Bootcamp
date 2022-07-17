@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>daily Challenge</title>
+</head>
+<body>
+<form action="index.html"c method="POST">
+	<input type="text" name="firstName" id ="fName">
+	<input type="text" name="lastName" id="lName">
+	<input type="submit" name="send" value="send" id="send">
+</form>
+
+<script type="text/javascript">
+const send = document.getElementById('send')
+send.addEventListener("click", newObj)
+
+function newObj(){
+	e.preventDefault()
+	const obj = { name: "", lastname: ""};
+	const firstName = document.getElementById('fName').textContent;
+	const lastname = document.getElementById('lName').textContent;
+	obj["name"] = firstName;
+	obj["lastname"] = lastname;
+	const JsonObj = JSON.stringify(obj);
+	console.log(JsonObj);
+}
+</script>
+</body>
+</html>
