@@ -6,15 +6,15 @@
 	<title>daily Challenge</title>
 </head>
 <body>
-<form action="index.html"c method="POST">
+<form action="index.html" method="POST" id="formUSer">
 	<input type="text" name="firstName" id ="fName">
 	<input type="text" name="lastName" id="lName">
 	<input type="submit" name="send" value="send" id="send">
 </form>
 
 <script type="text/javascript">
-const send = document.getElementById('send')
-send.addEventListener("click", newObj)
+const send = document.getElementById('formUSer')
+send.addEventListener("submit", newObj)
 
 function newObj(){
 	e.preventDefault()
