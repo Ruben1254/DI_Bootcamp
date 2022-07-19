@@ -5,17 +5,17 @@ const fetchGif = function (e) {
 
 	let gifSearch = e.target.gifsearch.value;
 
-	let gifUrl = `https://api.giphy.com/v1/gifs/search?q=${gifSearch}&rating=g&limit=1&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
+	let gifUrl = `https://api.giphy.com/v1/gifs/random?tag=${gifSearch}&rating=g&limit=1&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My`
 
 	fetch(gifUrl)
 		.then(response => response.json())
 		.then(data => {
 			let img = document.createElement('img');
-			img.setAttribute('src', data.data[0].images.original.url)
+			img.setAttribute('src', data.data.images.original.url)
 			img.setAttribute('class', 'removeAll')
 			document.body.appendChild(img)
 			let br = document.createElement('br')
-			br.setAttribute('class', 'brNum')
+			br.setAttribute('class', 'removeBr')
 			let butt = document.createElement('button')
 			butt.setAttribute('value','DELETE')
 			butt.setAttribute('class', 'removeButt')
@@ -48,25 +48,20 @@ document.body.appendChild(br2)
 
 let images = document.getElementsByClassName("removeAll");
 let removeButt = document.getElementsByClassName('removeButt')
-let brNum = document.getElementsByClassName("brNum")
+let removeBr = document.getElementsByClassName('removeBr')
 console.log(images)
 
 const removeAgain = () => {
 	let i = 0 
-	for (let i = 0 ; i < brNum.length; i++){
+	for (let i = 0 ; i < images.length; i++){
 		document.body.removeChild(images[i])
 		document.body.removeChild(removeButt[i])
+		document.body.removeChild(removeBr[i])
 	} 
 }
 
 
 delAll.addEventListener("click", removeAgain)
-
-
-
-
-
-
 
 
 
