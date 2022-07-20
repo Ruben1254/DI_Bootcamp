@@ -1,8 +1,8 @@
 const makeAllCaps = (array) => {
-	const promiseCaps = new Promise ((resolve, reject) =>{
-		if(array.forEach((item) => typeof(item) === "string")){
-			const arrayJson = array.json()
-			const upperArray = arrayJson.map((elements) => elements.toUpperCase)
+	return new Promise ((resolve, reject) =>{
+		if(array.every((item) => typeof(item) === "string")){
+			// const arrayJson = array.json()
+			const upperArray = array.map((elements) => elements.toUpperCase())
 			resolve (upperArray)
 		}else {
 			reject ("One of the elements not a string")
@@ -11,11 +11,10 @@ const makeAllCaps = (array) => {
 }
 
 const sortWords = (arr) => {
-	const sortWordsArray = new Promise ((resolve, reject) => {
-		if (arr > 4 ) {
+	return new Promise ((resolve, reject) => {
+		if (arr.length > 4 ) {
 			const sortedArray = arr.sort();
-			const jsonSorted = sortedArray.json()
-			resolve(jsonSorted)
+			resolve(sortedArray)
 		}else {
 			reject ("the array length smaller than or equal to 4")
 		}
@@ -28,6 +27,7 @@ makeAllCaps(["apple","banana","mango","peach","peer"])
 	.catch(error => console.log (error))
 
 
+// Second Daily Challenge
 
 
 
