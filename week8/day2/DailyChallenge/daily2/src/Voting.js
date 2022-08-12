@@ -27,7 +27,7 @@ class Voting extends React.Component{
                   return(
                     <div key={i}>
                       {item.name} {item.votes}
-                      <button onClick={()=>this.handleClick(item)}>Vote</button>
+                      <button onClick={()=>this.handleClick(item)}>Click Here</button>
                     </div>
                   )
                 })
