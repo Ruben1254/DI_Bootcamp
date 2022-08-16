@@ -1,13 +1,11 @@
-export const increase = count => {
+export const increase = () => {
     return {
-        type: "INCREASE_COUNT",
-        payload: count++
+        type: "INCREASE_COUNT"
     }
 }
 
-export const decrease = count => {
+export const decrease = () => {
     return {
         type: "DECREASE_COUNT",
-        payload: count--
     }
 }
