@@ -167,4 +167,13 @@ footer {
 
 
 
-
+@media only screen and (min-width: 300px) and (max-width: 650px) {
+	.navbar{
+		display: flex;
+	}
+	.header{
+		display: flex;
+    	justify-content: center;
+		height: 57vh;
+	}
+}
