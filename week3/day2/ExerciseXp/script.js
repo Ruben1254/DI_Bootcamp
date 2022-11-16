@@ -31,3 +31,50 @@ button.addEventListener('click', (e) => {
 		i++;
 	}
 });
+
+// Exercise 2
+//1
+
+let form = document.getElementsByTagName('form')[0]
+console.log(form)
+
+//2
+let fname = document.getElementById('fname')
+console.log(fname)
+
+let lname = document.getElementById('lname')
+console.log(lname)
+
+let submit = document.getElementById('submit')
+console.log(submit)
+
+//3 
+
+let first = document.getElementsByName('fname')[0]
+console.log(first)
+
+let last = document.getElementsByName('lname')[0]
+console.log(last)
+
+//4
+
+let formul = document.getElementsByTagName('form')[0]
+
+formul.addEventListener('submit', (e) => {
+	e.preventDefault()
+	console.log(fname.value)
+	
+	let ul = document.getElementsByClassName('usersAnswer')[0]
+
+	let li1 = document.createElement('li')
+	let li2 = document.createElement('li')
+
+	let name = document.createTextNode(fname.value)
+	let lastname = document.createTextNode(lname.value)
+    
+	li1.appendChild(name)
+	li2.appendChild(lastname)
+
+	ul.appendChild(li1)
+	ul.appendChild(li2)
+})
