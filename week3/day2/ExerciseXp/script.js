@@ -62,7 +62,6 @@ let formul = document.getElementsByTagName('form')[0]
 
 formul.addEventListener('submit', (e) => {
 	e.preventDefault()
-	console.log(fname.value)
 	
 	let ul = document.getElementsByClassName('usersAnswer')[0]
 
@@ -78,3 +77,46 @@ formul.addEventListener('submit', (e) => {
 	ul.appendChild(li1)
 	ul.appendChild(li2)
 })
+
+// exercise 3
+
+//1, 2
+let allBoldItems = []
+
+function getBold_items() {
+
+	let strong = document.getElementsByTagName('strong')
+	console.log(strong)
+	for (let  i= 0;  i < strong.length;  i++) {
+		 allBoldItems.push(strong[i].innerText)	
+	}
+	
+}
+
+console.log(allBoldItems)
+
+//3 
+let p3 = document.getElementById('exercise3')
+
+function highlight() {
+	let strong = document.getElementsByTagName('strong')
+	
+	for (let  i= 0;  i < strong.length;  i++) {
+		strong[i].style.color = 'blue';
+	}
+}
+
+
+//4 
+
+function return_normal() {
+	let strong = document.getElementsByTagName('strong')
+	
+	for (let  i= 0;  i < strong.length;  i++) {
+		strong[i].style.color = 'black';
+	}
+}
+
+//5
+p3.addEventListener( 'mouseover', highlight)
+p3.addEventListener( 'mouseout', return_normal)
