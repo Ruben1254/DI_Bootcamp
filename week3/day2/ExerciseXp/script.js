@@ -120,3 +120,19 @@ function return_normal() {
 //5
 p3.addEventListener( 'mouseover', highlight)
 p3.addEventListener( 'mouseout', return_normal)
+
+// exercise 4 
+
+let formR = document.getElementById('MyForm')
+
+function calaculateRadius(e){
+	e.preventDefault()
+	let radius = document.getElementById('radius')
+	console.log(radius.value)
+	let result= (4/3)*Math.PI*(radius.value**3)
+
+	document.getElementById('volume').value = result;
+	
+	}
+
+formR.addEventListener('submit', calaculateRadius)
