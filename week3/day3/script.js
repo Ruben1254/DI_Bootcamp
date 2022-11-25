@@ -6,7 +6,7 @@ function helloAlert() {
 
 setTimeout(helloAlert, 2000)
 
-let part2 = document.getElementById('container')
+let part2 = document.getElementById('container1')
 
 function helloParaph(){
     let hello = document.createElement('p')
@@ -28,3 +28,20 @@ const clearInt = () => {
 }
 
 clear.addEventListener('click', clearInt)
+
+// exe 2
+
+let cube = document.getElementById('animate')
+function myMove() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+        console.log(timePassed)
+        cube.style.left = timePassed / 5 + 'px';
+        if (timePassed > 1730) {
+          clearInterval(timer);
+        }
+    },20);
+}
+      
